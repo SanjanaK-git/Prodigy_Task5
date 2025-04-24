@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('weather\ background.jpg');
+    background-size: cover;
+    background-position: top center;
+    color: #f0f0f0;
+    transition: background-color 0.5s ease;
+}
+
+.app-wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 15px 15px;
+}
+
+header input {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px 20px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    border-bottom: 3px solid #ffcc00;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+header input:focus {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.02);
+}
+
+main {
+    flex: 1 1 100%;
+    padding: 25px 25px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.location .city {
+    color: #ffcc00;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.location .date {
+    color: #fff;
+    font-size: 18px;
+}
+
+.current .temp {
+    color: #ffcc00;
+    font-size: 120px;
+    font-weight: 900;
+    margin: 30px 0;
+    text-shadow: 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.current .temp span {
+    font-weight: 500;
+}
+
+.current .weather {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 15px;
+    text-shadow: 0 3px rgba(0, 0, 0, 0.4);
+}
+
+.current .hi-low {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+    text-shadow: 0 4px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 600px) {
+    header input {
+        max-width: 90%;
+    }
+
+    .location .city {
+        font-size: 28px;
+    }
+
+    .current .temp {
+        font-size: 80px;
+    }
+
+    .current .weather {
+        font-size: 28px;
+    }
+
+    .current .hi-low {
+        font-size: 20px;
+    }
+}
